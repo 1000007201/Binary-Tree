@@ -54,5 +54,19 @@ namespace MyBinaryTree
                 }
             }
         }
+        private void DisplayTree(Node<T> root)
+        {
+            if (root == null) return;
+
+            DisplayTree(root.leftnode);
+            System.Console.Write(root.NodeData + " ");
+            DisplayTree(root.rightnode);
+        }
+        public void DisplayTree()
+        {
+            DisplayTree(root);
+        }
+
+
     }
 }
